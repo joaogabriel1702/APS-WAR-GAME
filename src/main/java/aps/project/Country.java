@@ -1,56 +1,64 @@
 package aps.project;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Country {
 	private int army;
 	private String name;
 	private String ownerId;
-	private ArrayList<Country> countriesFrontier;
-	
-	public Country(String countryName, ArrayList<Country> countriesFrontie){
+	private List<String> countriesFrontier;
+
+	public Country(String countryName, List<String> countriesFrontie) {
 		this.name = countryName;
-		this.countriesFrontier = new ArrayList<Country>();
+		this.countriesFrontier = new ArrayList<String>();
 		this.countriesFrontier = countriesFrontie;
-		
+
 	}
+
 	public boolean isNeighbour(String otherCountryName) {
-		if(!name.equalsIgnoreCase(otherCountryName)) {
-			for(Country c : countriesFrontier) {
-				if(c.getName().equals(otherCountryName)) {
+		if (!name.equalsIgnoreCase(otherCountryName)) {
+			for (String c : countriesFrontier) {
+				if (c.equalsIgnoreCase(otherCountryName)) {
 					return true;
 				}
-			}
-		}		
-		return false;
-	}
-	
-	public boolean isNeighbour(Country other) {
-		for(Country c : countriesFrontier) {
-			if(c.getName().equals(other.getName())) {
-				return true;
 			}
 		}
 		return false;
 	}
-	
+
+	public boolean isNeighbour(Country other) {
+		if (!name.equalsIgnoreCase(other.getName())) {
+			for (String c : countriesFrontier) {
+				if (c.equalsIgnoreCase(other.getName())) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 	public int getArmy() {
 		return army;
 	}
+
 	public void setArmy(int army) {
 		this.army = army;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public String getOwnerId() {
 		return ownerId;
 	}
+
 	public void setOwnerId(String ownerId) {
 		this.ownerId = ownerId;
 	}
-	public ArrayList<Country> getCountriesFrontier() {
+
+	public List<String> getCountriesFrontier() {
 		return countriesFrontier;
 	}
-	
+
 }

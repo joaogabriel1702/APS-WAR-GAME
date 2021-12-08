@@ -5,6 +5,6 @@ import java.util.ArrayList;
 public class Map {
 	private ArrayList<Country> countries;
 	public Map () {
-		countries = new ArrayList();
+		countries = new ArrayList<Country>();
 	}
 }
