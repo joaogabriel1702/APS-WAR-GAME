@@ -7,10 +7,15 @@ public class GameBoardSingleton {
 		gameMap = new Map();
 	}
 
-	public static GameBoardSingleton getInstance() {
+	public static GameBoardSingleton GetInstance() {
 		if (instance == null) {
 			instance = new GameBoardSingleton();
 		}
 		return instance;
 	}
+	
+	public void ResetInstance() {
+		instance = null;
+	}
+	
 }

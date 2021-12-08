@@ -8,14 +8,14 @@ import org.junit.Test;
 public class GameBoardTest {
 	@Test
 	public void test01InstanceIsNotNull() {
-		GameBoardSingleton instance =GameBoardSingleton.getInstance();
+		GameBoardSingleton instance =GameBoardSingleton.GetInstance();
 		Assert.assertTrue(instance != null);
 	}
 
 	@Test
 	public void test02TwoSingletonsSameInstance() {
-		GameBoardSingleton s1 = GameBoardSingleton.getInstance();
-		GameBoardSingleton s2 = GameBoardSingleton.getInstance();
+		GameBoardSingleton s1 = GameBoardSingleton.GetInstance();
+		GameBoardSingleton s2 = GameBoardSingleton.GetInstance();
 		Assert.assertTrue(s1 == s2);
 		Assert.assertEquals(s1, s2);
 	}
