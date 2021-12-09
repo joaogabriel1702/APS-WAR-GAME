@@ -7,7 +7,7 @@ public class GameBoardSingleton {
 		gameMap = new Map();
 	}
 
-	public static GameBoardSingleton GetInstance() {
+	public static GameBoardSingleton getInstance() {
 		if (instance == null) {
 			instance = new GameBoardSingleton();
 		}

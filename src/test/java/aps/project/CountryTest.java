@@ -9,21 +9,21 @@ public class CountryTest {
 	private Country country1;
 	private Country country2;
 	private Country country3;
-	private List<String> conuntry1Frontier;
-	private List<String> conuntry2Frontier;
-	private List<String> conuntry3Frontier;
+	private List<String> country1Frontier;
+	private List<String> country2Frontier;
+	private List<String> country3Frontier;
 	
 	@Before
 	public void inicalize() {
-		conuntry1Frontier = new  ArrayList<String>();
-		conuntry1Frontier.add("Argentina");
-		country1 = new Country ("Brasil", conuntry1Frontier);
-		conuntry2Frontier = new  ArrayList<String>();
-		conuntry2Frontier.add("Brasil");
-		country2 = new Country ("Argentina", conuntry2Frontier);
-		conuntry3Frontier = new  ArrayList<String>();
-		conuntry3Frontier.add("Paraguai");
-		country3 = new Country ("Chile", conuntry3Frontier);
+		country1Frontier = new  ArrayList<String>();
+		country1Frontier.add("Argentina");
+		country1 = new Country ("Brasil", country1Frontier);
+		country2Frontier = new  ArrayList<String>();
+		country2Frontier.add("Brasil");
+		country2 = new Country ("Argentina", country2Frontier);
+		country3Frontier = new  ArrayList<String>();
+		country3Frontier.add("Paraguai");
+		country3 = new Country ("Chile", country3Frontier);
 		
 	}
 	
