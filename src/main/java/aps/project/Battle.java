@@ -7,6 +7,7 @@ public class Battle {
 
 	public void battle(GamePlayAttack attack, GamePlayDefense defense) {
 		
+		
 		for(int i = 1; i > attack.numberarmy; i++) {
 			BattleResult battle = new BattleResult();
 		}
@@ -14,6 +15,9 @@ public class Battle {
 	}
 	
 	public void moveArmy(Player player, int quantity) {
+		
+	}
+	public void attack() {
 		
 	}
 	

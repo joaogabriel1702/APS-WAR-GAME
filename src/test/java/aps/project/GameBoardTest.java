@@ -22,9 +22,7 @@ public class GameBoardTest {
 
 	@Test
 	public void test03ConstructorIsNotPublic() {
-		Class<GameBoardSingleton> aClass =
-
-				GameBoardSingleton.class;
+		Class<GameBoardSingleton> aClass = GameBoardSingleton.class;
 		Constructor<GameBoardSingleton> constructor;
 		try {
 			constructor = aClass.getConstructor();
@@ -33,5 +31,10 @@ public class GameBoardTest {
 		} catch (Exception e) {
 			Assert.assertTrue(true);
 		}
+	}
+	public void test04MapExists() {
+		GameBoardSingleton instance =GameBoardSingleton.getInstance();
+		Map gameTest = instance.getGameMap();
+		Assert.assertTrue(gameTest != null);
 	}
 }

@@ -1,20 +1,58 @@
 package aps.project;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Player {
+
+	private int armies;
+
+	private String name;
+
+	private ArrayList<Country> countriesHeld;
 	
-	String playerId;
-	Map map;
-	//String goalCard;
-	//List<String> countryCardList;
-	
-	public String GetPlayer(){
-		return playerId;
+	public Player(String name, int armies) {
+
+		this.name = name;
+		this.armies = armies;
+		countriesHeld = new ArrayList<Country>();
 	}
+
+	public String getName() {
+		return name;
+	}
+
 	
-	public void MakeAction(GamePlayStrategy action){
-		//todo
-	};
-	
+	public int getArmies() {
+		return armies;
+	}
+
+
+	public void decrementArmies(int numArmies) {
+
+		armies = armies - numArmies;
+		System.out.println(name + " has " + armies + " reinforcements remaining.");
+	}
+
+	public void incrementArmies(int numArmies) {
+
+		armies = armies + numArmies;
+		System.out.println(name + " has gained " + numArmies + " reinforcements. Total available: " + armies);
+	}
+
+
+	public void addCountry(Country country) {
+
+		countriesHeld.add(country);
+	}
+
+
+	public void addCountry(ArrayList<Country> countriesList) {
+		this.countriesHeld.addAll(countriesList);
+	}
+
+	public void removeCountry(Country countryName) {
+		countriesHeld.remove(countryName);
+	}
+
 }

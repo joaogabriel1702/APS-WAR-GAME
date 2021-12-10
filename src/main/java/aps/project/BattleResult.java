@@ -6,10 +6,10 @@ public class BattleResult {
 	public void rollDices() {
 		
 		Dice diceAttack = new Dice();
-        diceAttack.Roll();
+        diceAttack.roll();
         
         Dice diceDefense = new Dice();
-        diceDefense.Roll();
+        diceDefense.roll();
         
         if(diceAttack.getDice() > diceDefense.getDice()) {
         	playerWinner = "Attack";

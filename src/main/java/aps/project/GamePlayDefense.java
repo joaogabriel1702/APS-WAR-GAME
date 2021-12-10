@@ -5,7 +5,7 @@ public class GamePlayDefense implements GamePlayStrategy {
 	int defenserdice;
 	Dice dice;
 
-	public void MakeGamePlay(Country countryorigin, Country countrynext) {
+	public void MakeGamePlay(Country countryOrigin, Country countryNext) {
 		// TODO Auto-generated method stub
 		
 	}
