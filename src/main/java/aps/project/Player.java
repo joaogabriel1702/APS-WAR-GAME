@@ -2,6 +2,7 @@ package aps.project;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Player {
 
@@ -11,6 +12,12 @@ public class Player {
 
 	private ArrayList<Country> countriesHeld;
 	
+	public Player(String name) {
+
+		this.name = name;
+		this.armies = 0;
+		countriesHeld = new ArrayList<Country>();
+	}
 	public Player(String name, int armies) {
 
 		this.name = name;
@@ -47,7 +54,7 @@ public class Player {
 	}
 
 
-	public void addCountry(ArrayList<Country> countriesList) {
+	public void addCountry(List<Country> countriesList) {
 		this.countriesHeld.addAll(countriesList);
 	}
 
